@@ -51,6 +51,8 @@ while True:
         escolha = int(input("Escolha uma opção: "))
     except Exception as ex:
         print("Deu erro")
+    finally:
+        print("Aba fechada.")
 
     if escolha == 1:
         try:
