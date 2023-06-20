@@ -46,8 +46,11 @@ while True:
     print("5. Valor total da compra.")
     print("6. Limpar a lista")
     print("0. Sair do sistema")
-    print("-=-=-=Lista de Compras Supermercado=-=-=-")
-    escolha = int(input("Escolha uma opção: "))
+    print("-=-=-=Lista de Compras Supermercado=-=-=-"),
+    try:
+        escolha = int(input("Escolha uma opção: "))
+    except Exception as ex:
+        print("Deu erro")
 
     if escolha == 1:
         try:
@@ -92,10 +95,6 @@ while True:
         finally:
             print("Processo terminado")
     elif escolha == 0:
-        try:
-            limpar_lista()
-        except Exception as ex:
-            print(f"Ocorreu um erro: {ex}")
-        finally:
-            print("Processo terminado")
-
+        break
+    else:
+        print("Caracter Inválido")
